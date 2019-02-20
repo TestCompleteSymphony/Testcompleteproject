@@ -1,0 +1,163 @@
+﻿
+
+function SelectDateFromDateNavigator()//Year,Month,StartDay,EndDay)
+{
+  var tradeCapture = Aliases["TradeCapture"];
+  var scrollViewer = tradeCapture["HwndSource_ribbonWindow"]["ribbonWindow"]["dwgMainPanel"]["mainPanel"]["tradeViewScroll"];
+  scrollViewer["VScroll"]["Pos"] = 0;
+  scrollViewer["PhyicalTradeInfoGrid"]["RecieptDatePeriodicity"]["DropDown"]["ClickButton"]();
+  var popupRoot = tradeCapture["HwndSource_PopupRoot"]["PopupRoot"];
+  var dateNavigator = popupRoot["dateNavigator"];
+  dateNavigator["SelectedDates"]["ClearItems"]();
+  var i,Year,Month,StartDay,EndDay;
+  Year = 2018;
+  Month = 12;
+  StartDay =5;
+  EndDay = 30;
+  for ( i=aqConvert["VarToInt"](StartDay); i <=aqConvert["VarToInt"](EndDay) ; i++ )
+  {
+    dateNavigator["SelectedDates"].Add(dotNET["System"]["DateTime"]["zctor_3"](aqConvert["VarToInt"](Year), aqConvert["VarToInt"](Month), i)) //'Format: Year/Month/Day
+  }
+//  dateNavigator["UpdateMonthContentCalendarsSpecialDates"]()
+  dateNavigator["UpdateMonthContentCalendarsSelectedDates"]()
+  
+  Log["Message"](dateNavigator["SelectedDates"]["Count"]())
+  
+  popupRoot["btnOK"]["ClickButton"]();
+}
+
+function Test1()
+{
+  var tradeCapture = Aliases["TradeCapture"];
+  var scrollViewer = tradeCapture["HwndSource_ribbonWindow"]["ribbonWindow"]["dwgMainPanel"]["mainPanel"]["tradeViewScroll"];
+  scrollViewer["VScroll"]["Pos"] = 1.1599999999999682;
+  scrollViewer["PhyicalTradeInfoGrid"]["RecieptDatePeriodicity"]["DropDown"]["ClickButton"]();
+  var dateNavigator = tradeCapture["HwndSource_PopupRoot"]["PopupRoot"]["dateNavigator"];
+  dateNavigator["Click"](226, 12);
+  dateNavigator["Click"](226, 12);
+  dateNavigator["Click"](226, 12);
+  dateNavigator["Click"](114, 14);
+  dateNavigator["Click"](122, 14);
+  dateNavigator["Click"](224, 12);
+  dateNavigator["Click"](224, 12);
+  dateNavigator["Click"](226, 11);
+  dateNavigator["DblClick"](15, 15);
+  dateNavigator["Click"](15, 15);
+}
+
+function SearchPortfolioByNum(PortifolioNum)
+{
+  var rowCount, colCount, childRowCount, subChildRowCount,grandRowCount;
+  var riskManagerForm, portfolioTreeListWrapper, childViewControl;
+  
+  riskManagerForm = Aliases["RiskManager"]["RiskManagerForm"];
+  riskManagerForm["Activate"]();
+  
+  portfolioTreeListWrapper = riskManagerForm["horizontalPortfolioSplitterControl"]["SplitGroupPanel"]["verticalPnlSplitterControl"]["SplitGroupPanel"]["PanelControl"]["PanelControl"]["portfolioTreeList"];
+  portfolioTreeListWrapper["CollapseAll"]()
+  
+  x = portfolioTreeListWrapper["FindRow"]("Port Num",PortifolioNum)
+  if(x>0)
+  {
+    Log["Message"]("Port Num was found in row num : "+(x+1))
+    portfolioTreeListWrapper["DblClickCell"](x,"Port Num");
+    return "found";
+  }
+  else
+  {      
+    rowCount = portfolioTreeListWrapper["wRowCount"]
+    for (var i=0;i< rowCount;i++)//Base Child Level
+    {
+      portfolioTreeListWrapper["Expand"](i);
+      Delay(2000,"Waiting for the tree items to load...")
+      childRowCount = portfolioTreeListWrapper["wChildView"](i)["wRowCount"]      
+      if (childRowCount>0)
+      {   
+        x = portfolioTreeListWrapper["wChildView"](i)["FindRow"]("Port Num",PortifolioNum)
+        if(x>=0)
+        {
+          portfolioTreeListWrapper["wChildView"](i)["DblClickCell"](x,"Port Num");
+          return "found";              
+        } 
+        else
+        {
+          for (var j=0;j< childRowCount;j++)//Next Child Level
+          {
+            portfolioTreeListWrapper["wChildView"](i)["Expand"](j);
+            Delay(1000,"Waiting for the tree items to load...")
+            if(portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)!=null)
+            {
+              if(aqConvert["VarToInt"](portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wRowCount"])>0)
+              {        
+                x = portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["FindRow"]("Port Num",PortifolioNum)
+                if(x>=0)
+                {
+                  portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["DblClickCell"](x,"Port Num");
+                  return "found";              
+                }
+                else
+                {
+                  for(var k = 0; k< aqConvert["VarToInt"](portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wRowCount"]); k++)//Next Child Level
+                  {
+                    portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["Expand"](k);
+                    Delay(1000,"Waiting for the tree items to load...")
+                    if(portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)!=null)
+                    {
+                      if(aqConvert["VarToInt"](portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["wRowCount"])>0)
+                      {        
+                        x = portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["FindRow"]("Port Num",PortifolioNum)
+                        if(x>=0)
+                        {
+                          portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["DblClickCell"](x,"Port Num");
+                          return "found";              
+                        }
+                        else
+                        {
+                          for(var l = 0; l< aqConvert["VarToInt"](portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["wRowCount"]); l++)//Next Child Level
+                          {
+                            portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["Expand"](l);
+                            Delay(1000,"Waiting for the tree items to load...")
+                            if(portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["wChildView"](l)!=null)
+                            {
+                              if(aqConvert["VarToInt"](portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["wChildView"](l)["wRowCount"])>0)
+                              {        
+                                x = portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["wChildView"](l)["FindRow"]("Port Num",PortifolioNum)
+                                if(x>=0)
+                                {
+                                  portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["wChildView"](l)["DblClickCell"](x,"Port Num");
+                                  return "found";              
+                                }
+                                else
+                                {
+                          
+                                }
+                             }portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["wChildView"](k)["Collapse"](l);
+                           }
+                        }
+                     }portfolioTreeListWrapper["wChildView"](i)["wChildView"](j)["Collapse"](k);
+                   }
+                }
+                portfolioTreeListWrapper["wChildView"](i)["Collapse"](j);
+              }
+            }
+          }      
+        }
+      }
+      portfolioTreeListWrapper["Collapse"](i);
+    }
+  }  
+ } 
+}}
+function Main()
+{
+  var riskManagerForm = Aliases["RiskManager"]["RiskManagerForm"];
+  var portfolioTreeListWrapper = riskManagerForm["horizontalPortfolioSplitterControl"]["SplitGroupPanel"]["verticalPnlSplitterControl"]["SplitGroupPanel"]["PanelControl"]["PanelControl"]["portfolioTreeList"];
+  
+ 
+   var searchRow = SearchPortfolioByNum(379521);
+   Log["Message"](searchRow)
+}
+function SelectValueFromGridMultilevel()
+{
+  
+}

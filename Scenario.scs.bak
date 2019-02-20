@@ -1,0 +1,31 @@
+﻿//USEUNIT LaunchApplication
+//USEUNIT TradeCapture
+//USEUNIT RiskManager
+
+
+var Trade1, Trade2
+
+
+function Main()
+{
+  
+  //Launch Risk Manager application
+  LaunchRiskManager();
+  
+  //Create a Real Portifoli on QA(World) portifolio
+  Project["Variables"]["RealPortID"] = CreateRealPortfolio("3.3.2 Test","Auto1");
+  Log["Message"]("Newly Created Real Portfolio ID is: " +RealPortID);
+  
+  //Launch Trade Capture application
+  LaunchTradeCapture();
+  
+  // Create two phisical Trades
+  Trade1 = CreatePhysicalTrade(1,RealPortID)
+  Log["Message"]("Trade1 ID:"+Trade1)
+  Delay(5000)
+  Trade2 = CreatePhysicalTrade(2,RealPortID)  
+  Log["Message"]("Trade1 ID:"+Trade2)
+  
+  
+  
+}

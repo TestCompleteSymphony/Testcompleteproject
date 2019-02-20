@@ -1,0 +1,300 @@
+﻿//USEUNIT LaunchApplication
+
+
+function AddPhysicalTrade()
+{
+  var x;
+  
+  Trade1 = CreatePhysicalTrade(1,"121595")
+  Log["Message"]("Trade1 ID:"+Trade1)
+//  Trade2 = CreateTrade(2,"121595")  
+//  Log["Message"]("Trade1 ID:"+Trade2)
+}
+
+var Sno,TradeDate,Trader,ContractType,CounterPartyName,Buy_Sell,Commodity,ContractQty,ContractQtyUOM;
+var MOT_Carrier,DeliveryTerm,RiskMarket,RiskPeriod,TitletransferLoc,Portfolio,PaymentTerm,DischargePort;
+var LoadPort,TradePriceUOM;
+var TradePriceCur,TradePrice,GT_C,CreditTerm;
+
+function CreatePhysicalTrade(TradeIndex,RealPortID)
+{
+  var x, TradeIndex;
+  
+  var TradeCapture= Aliases["TradeCapture"]
+  var TradeWindow = Aliases["TradeCapture"]["HwndSource_ribbonWindow"]["ribbonWindow"];
+  TradeWindow["Activate"]();
+  
+  //Choose Physical order 
+  TradeWindow["TradeOrderTypesSelection"]["Grid"]["TradeOrderTypes"]["ToggleStateButton"]["Click"]();
+  OCR["Recognize"](TradeCapture["HwndSource_PopupRoot"]["PopupRoot"]["itmPurchageOrSaleTradeOrder"])["BlockByText"]("Physical")["Click"]();
+  
+  //Clicks the 'New' button.
+  TradeWindow["TradeOrderTypesSelection"]["Grid"]["NewBtn"]["ClickButton"]();
+  
+  var tradeLayoutGroup = TradeWindow["dwgMainPanel"]["mainPanel"]["tradeViewScroll"]["tradeLayoutGroup"]
+  var PhyicalTradeInfoGrid = TradeWindow["dwgMainPanel"]["mainPanel"]["tradeViewScroll"]["PhyicalTradeInfoGrid"]
+  var tradeItemLayoutGroup = TradeWindow["dwgMainPanel"]["mainPanel"]["tradeViewScroll"]["tradeItemLayoutGroup"]
+  var tradeItemLayoutGroupSP = TradeWindow["dwgMainPanel"]["mainPanel"]["tradeViewScroll"]["tradeItemLayoutGroup"]["tradeItemLayoutGroupSP"]
+  
+  //Getting the excel sheet control
+    
+  var ExDriver=DDT["ExcelDriver"](aqConvert["VarToStr"](Files["FileNameByName"]("TestData_xlsx")),"TradeData",true);
+  var ColumnCount = ExDriver["ColumnCount"];
+  Log.Message("Total number columns are "+ ColumnCount);
+	  
+  //Setting the excel sheet focus to first cell value     
+  ExDriver.First();
+  
+  while(!ExDriver.EOF())
+  {
+    
+    for(var column=0;column<=ColumnCount;column++) 
+    {       
+        Sno = aqConvert["VarToStr"](ExDriver["Value"](column))
+        if((aqConvert["VarToStr"](Sno) == aqConvert["VarToStr"](TradeIndex)))
+        { 
+          for(var column=1;column<ColumnCount;column++) 
+          {
+          
+            switch(aqConvert["VarToStr"](ExDriver["ColumnName"](column)))
+            {
+                case "TradeDate":
+                  tradeLayoutGroup["tradeDataCtl"]["StackPanel"]["StackPanel"]["StackPanel"]["ddContrEndDate"]["Text"] = aqConvert.VarToStr(ExDriver["Value"](column));
+                  TradeDate = aqConvert.VarToStr(ExDriver["Value"](column));
+                  break;
+        
+                case "Trader":
+                  //Entering Trader
+                  tradeLayoutGroup["tradeDataCtl"]["StackPanel"]["StackPanel"]["StackPanel"]["TraderLookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Tab][Enter]");
+                  break;
+        
+                case "ContractType":
+                  //Entering Trade cmbTradeType
+                  tradeLayoutGroup["tradeDataCtl"]["StackPanel"]["StackPanel"]["StackPanel"]["TradeType"]["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  break;
+         
+                case "CounterPartyName":
+                  //Entering Trade Counterparty  
+                  tradeLayoutGroup["tradeDataCtl"]["StackPanel"]["StackPanel"]["counterParty"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Enter]");          
+                  break;
+        
+                case "Buy/Sell Indicator":
+                  //Choosing Bu/Sell indicator 
+                  PhyicalTradeInfoGrid["BuySellType"]["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  break;
+         
+                case "Commodity":
+                  //Entering commodity
+                  //PhyicalTradeInfoGrid["StackPanel"]["CommodityLookup"]["Keys"]("[Tab]");
+                  
+                  PhyicalTradeInfoGrid["StackPanel"]["CommodityLookup"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  PhyicalTradeInfoGrid["StackPanel"]["CommodityLookup"]["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  break;
+       
+                case "ContractQty":
+                  //Enters Contract Qty
+                  PhyicalTradeInfoGrid["spnlQuantity"]["TradeQuantity"]["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  PhyicalTradeInfoGrid["spnlQuantity"]["TradeQuantity"]["Keys"]("[Tab]");
+                  break;
+          
+                case "ContractQtyUOM":
+                  //Selecting Contract Qty UOM
+                  PhyicalTradeInfoGrid["spnlQuantity"]["lookupEdit"]["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  PhyicalTradeInfoGrid["spnlQuantity"]["lookupEdit"]["Keys"]("[Tab]");
+                  break;
+
+                case "DeliveryPeriod":
+                  PhyicalTradeInfoGrid["RecieptDatePeriodicity"]["RecieptDateTxt"]["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  break;
+                            
+                case "MOT/Carrier":
+                  //Selecting MOT
+                  SelectMOT_CarrierValue();
+//                  PhyicalTradeInfoGrid["MotDropDown"]["WPFObject"]("motsDropDownCtl")["WPFObject"]("mainGrid")["WPFObject"]("DockPanel", "", 1)["WPFObject"]("textEditor")["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  break;
+        
+                case "DeliveryTerm":
+                  //Selecting Delivery Term
+                  PhyicalTradeInfoGrid["DeliveryTerm"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Enter]");
+                  break;
+    
+                case "RiskMarket":
+                  //Selecting Risk Market
+                  PhyicalTradeInfoGrid["RiskMarket"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Enter]");
+                  break;
+        
+                case "RiskPeriod":
+                  
+                  // Set Receipt Date : Select 30 days from Trade Date    
+                  SetReceiptDate(TradeDate,30);
+                
+                  //Selecting Risk Period 
+                  PhyicalTradeInfoGrid["RiskTrdPrd"]["lookupEdit"]["Keys"]("[Del]")
+                  PhyicalTradeInfoGrid["RiskTrdPrd"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  PhyicalTradeInfoGrid["RiskTrdPrd"]["lookupEdit"]["Keys"]("[Tab]")
+                  break;
+          
+                case "TitletransferLoc":
+                  //Selecting Title transfer location
+                  PhyicalTradeInfoGrid["TitleTransferLoc"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Tab]");
+                  break;
+          
+                case "Portfolio":
+                  //Selecting Portfolio 
+                  PhyicalTradeInfoGrid["Portfolio"]["lookupEdit"]["Keys"](aqConvert.VarToStr(RealPortID)+"[Enter]");
+                  break;
+          
+                case "PaymentTerm":
+                  //Selecting Payment term 
+                  PhyicalTradeInfoGrid["PaymentTerm"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Enter]");
+                  break;
+          
+                case "CreditTerm":
+                  //Selecting Credit term
+                  PhyicalTradeInfoGrid["CreditApproval"]["lookupEdit"]["Keys"]("[Del]")
+                  PhyicalTradeInfoGrid["CreditApproval"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  PhyicalTradeInfoGrid["CreditApproval"]["lookupEdit"]["Keys"]("[Tab]")
+                  break;
+          
+                case "GT&C":                
+                  //Selecting GT & C
+                  PhyicalTradeInfoGrid["GTandC"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Tab]");
+                  break;
+             
+                case "TradePrice":
+                  //Entering Fixed price 
+                  PhyicalTradeInfoGrid["FormulaTabControl"]["txtFixedFinalPriceAmt"]["SetText"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  break;
+      
+                case "TradePriceCur":
+                  //Selecting Price Currency
+                  PhyicalTradeInfoGrid["FormulaTabControl"]["FixedFinalPrice"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column)));
+                  break;
+        
+                case "TradePriceUOM":
+                   //Selecting Price UOM
+                   PhyicalTradeInfoGrid["FormulaTabControl"]["FixedFinalPriceUom"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Tab]");
+                  break;
+          
+                case "LoadPort":
+                  tradeItemLayoutGroup["GroupBox"]["LabelTradeMisc"]["Click"]();
+                  tradeItemLayoutGroupSP["LoadPort"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Tab]");
+                  break;
+                  
+                case "DischargePort":
+                  tradeItemLayoutGroupSP["DistPort"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Tab]");
+                  break;
+                
+                case "LeaseTank":
+                  //Selecting Lease/Tank
+                  //tradeItemLayoutGroup["GroupBox"]["LabelTradeMisc"]["Click"]();
+                  tradeItemLayoutGroupSP["dLocationTankInfo"]["lookupEdit"]["Keys"](aqConvert.VarToStr(ExDriver["Value"](column))+"[Tab]");
+                  break;
+            }  
+          }
+        }
+        else
+        {
+          break;
+        }	  
+      }ExDriver.Next();
+    } 
+    
+    
+    // Set Tolerance value to zero.
+    PhyicalTradeInfoGrid["PlusMinus"]["PlusMinusQty"]["Click"]()
+    PhyicalTradeInfoGrid["PlusMinus"]["PlusMinusQty"]["Keys"]("0.00");
+    
+    PhyicalTradeInfoGrid["PlusMinus"]["lookupEdit"]["SetText"]("BBL");
+    PhyicalTradeInfoGrid["PlusMinus"]["lookupEdit"]["Keys"]("[Tab]");
+    
+    //Click on Save button to save the trade;
+    TradeWindow["dwgMainPanel"]["mainPanel"]["mainCtrlGrid"]["DockPanel"]["StackPanel"]["Save"]["ClickButton"]();
+    
+    //Delay the execution for 1minuate 
+    aqUtils.Delay(5000); 
+    
+    TradeNum = aqString["SubString"](aqConvert["VarToStr"](TradeWindow["stkPnlStartupOptions"]["RecentTradesList"]["wItem"](0)), 1, 8);
+    
+  return TradeNum;
+}
+
+
+function SelectDateFromDateNavigator(Year,Month,StartDay,EndDay)
+{
+  var i,Year,Month,StartDay,EndDay;
+  var tradeCapture = Aliases["TradeCapture"];
+  var scrollViewer = tradeCapture["HwndSource_ribbonWindow"]["ribbonWindow"]["dwgMainPanel"]["mainPanel"]["tradeViewScroll"];
+  scrollViewer["VScroll"]["Pos"] = 0;
+  scrollViewer["PhyicalTradeInfoGrid"]["RecieptDatePeriodicity"]["DropDown"]["ClickButton"]();
+  var popupRoot = tradeCapture["HwndSource_PopupRoot"]["PopupRoot"];
+  var dateNavigator = popupRoot["dateNavigator"];
+  dateNavigator["SelectedDates"]["ClearItems"]();
+  
+  for ( i=aqConvert["VarToInt"](StartDay); i <=aqConvert["VarToInt"](EndDay) ; i++ )
+  {
+    dateNavigator["SelectedDates"].Add(dotNET["System"]["DateTime"]["zctor_3"](aqConvert["VarToInt"](Year), aqConvert["VarToInt"](Month), i)) //'Format: Year/Day/Mounth
+  }
+  dateNavigator["UpdateMonthContentCalendarsSelectedDates"]()
+  
+  Log["Message"](dateNavigator["SelectedDates"]["Count"]())
+  
+  popupRoot["btnOK"]["ClickButton"]();
+}
+
+function SetReceiptDate(TradeDate,EndDay)
+{
+  var tradeDate_Day = aqDateTime["GetDay"](aqConvert["StrToDate"](TradeDate));
+  var tradeDate_Month = aqDateTime["GetMonth"](aqConvert["StrToDate"](TradeDate));
+  var tradeDate_Year = aqDateTime["GetYear"](aqConvert["StrToDate"](TradeDate));
+  EndDay = aqConvert["VarToInt"](EndDay)
+
+  SelectDateFromDateNavigator(tradeDate_Year,tradeDate_Month,tradeDate_Day,EndDay)
+}
+
+function Test1()
+{
+  var scrollViewer = Aliases["TradeCapture"]["HwndSource_ribbonWindow"]["ribbonWindow"]["dwgMainPanel"]["mainPanel"]["tradeViewScroll"];
+  var motsDropDownCtl = scrollViewer["PhyicalTradeInfoGrid"]["MotDropDown"]["WPFObject"]("motsDropDownCtl")
+  motsDropDownCtl["Click"]()
+  scrollViewer["VScroll"]["Pos"] = 0;
+  var stackPanel = scrollViewer["PhyicalTradeInfoGrid"]["MotDropDown"];
+  stackPanel["Click"]()
+  var popupRoot = Aliases["TradeCapture"]["HwndSource_PopupRoot"]["PopupRoot"];
+  var gridRow = popupRoot["GridRow4"];
+  
+  motsDropDownCtl["WPFObject"]("mainGrid")["WPFObject"]("DockPanel", "", 1)["WPFObject"]("textEditor")["SetText"]("STORAGE/ANEMA")
+  
+  Aliases["TradeCapture"]["HwndSource_PopupRoot"]["PopupRoot"]["motTypesTreeViewCtl"]["UpdateRows"]
+  popupRoot["btnOK"]["ClickButton"]();
+}
+
+function Test2()
+{
+  var tradeCapture = Aliases["TradeCapture"];
+  var scrollViewer = tradeCapture["HwndSource_ribbonWindow"]["ribbonWindow"]["dwgMainPanel"]["mainPanel"]["tradeViewScroll"];
+  scrollViewer["VScroll"]["Pos"] = 0;
+  var stackPanel = scrollViewer["PhyicalTradeInfoGrid"]["MotDropDown"];
+  stackPanel["textEditor"]["Click"]();
+  stackPanel["PART_Item"]["Click"]();
+  var popupRoot = tradeCapture["HwndSource_PopupRoot"]["PopupRoot"];
+  var gridRow = popupRoot["GridRow4"];
+  gridRow["TextEdit"]["Click"](19, 10);
+  gridRow["RowMarginControl"]["Click"](6, 8);
+  popupRoot["motTypesTreeViewCtl"]["GridRow"]["TextEdit"]["Click"](34, 6);
+  popupRoot["btnOK"]["ClickButton"]();
+}
+
+function SelectMOT_CarrierValue()
+{
+  var tradeCapture = Aliases["TradeCapture"];
+  var scrollViewer = tradeCapture["HwndSource_ribbonWindow"]["ribbonWindow"]["dwgMainPanel"]["mainPanel"]["tradeViewScroll"];
+  scrollViewer["VScroll"]["Pos"] = 0;
+  scrollViewer["PhyicalTradeInfoGrid"]["MotDropDown"]["PART_Item"]["Click"]();
+  var popupRoot = tradeCapture["HwndSource_PopupRoot"]["PopupRoot"];
+  var gridRow = popupRoot["GridRow4"];
+  gridRow["RowMarginControl"]["Click"]();
+  popupRoot["motTypesTreeViewCtl"]["GridRow"]["TextEdit"]["Click"]();
+  
+  tradeCapture["HwndSource_PopupRoot"]["PopupRoot"]["btnOK"]["ClickButton"]();
+}
