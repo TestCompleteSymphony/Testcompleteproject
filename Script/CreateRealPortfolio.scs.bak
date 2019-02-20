@@ -1,0 +1,42 @@
+﻿function main()
+{
+  var RealPortID = CreateRealPortfolio("QA","ScTest")
+  Log["Message"]("Newly Created Real Portfolio ID is: " +RealPortID);
+}
+
+function CreateRealPortfolio(WorldPortName,RealPortName)
+{
+  var PortfoliNum;
+  var riskManager = Aliases["RiskManager"];
+  
+  var portfolioTreeList = riskManager["RiskManagerForm"]["horizontalPortfolioSplitterControl"]["SplitGroupPanel"]["verticalPnlSplitterControl"]["SplitGroupPanel"]["PanelControl"]["PanelControl"]["portfolioTreeList"];
+  var groupControl = riskManager["PortfolioEditor"]["gcPortfolio"];
+  var PortTypeAdditionalInfoPanel = groupControl["xtcPortfolios"]["PortTypeInfo"]["PortTags"]["gcPortTags"]["clientDataPanel"]
+  
+  var RowNum = portfolioTreeList["FindRow"]("Portfolio",WorldPortName);
+  
+  if(portfolioTreeList["FindChild"]("Value", WorldPortName, 10)["Exists"])
+  {
+    portfolioTreeList["FindChild"]("Value", WorldPortName, 10).ClickR();
+    riskManager["contextMenuStrip1"]["menuitemCreateNewPortfolio"]["Click"]();
+    
+    groupControl["ShortName"]["Keys"](RealPortName); // Set Short Name    
+    groupControl["HistoryDays"]["Keys"]("20"); // Set History Days    
+    groupControl["FullName"]["Keys"](RealPortName); // Set Full Name same as Short Name    
+    groupControl["BaseCurrency"]["Keys"]("USD[Tab]"); //// Set BaseCurrency     
+    PortTypeAdditionalInfoPanel["BookingCompany"]["BookingCmpTagValue"]["Keys"]("PEI[Tab]");    
+    PortTypeAdditionalInfoPanel["Classification"]["ClassificationTagValue"]["Keys"]("Active[Tab]");
+    PortTypeAdditionalInfoPanel["LocationOnPL"]["LocationOnPLTagValue"]["Keys"]("C[Tab]");
+    PortTypeAdditionalInfoPanel["SummaryPLReport"]["SummaryPLReportTagValue"]["Keys"]("C[Tab]");
+    groupControl["Save"]["ClickButton"]();
+  }
+  
+  portfolioTreeList["Expand"](RowNum);
+  
+  Delay(2000,"Waiting for the tree items to load...")
+  
+  var childRow = portfolioTreeList["wChildView"](RowNum)["FindRow"]("Portfolio",RealPortName)
+  
+  return portfolioTreeList["wChildView"](RowNum)["wValue"](childRow, "Port Num")
+
+}

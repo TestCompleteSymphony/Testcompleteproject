@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="Library">
+			<child name="SelectionRoutines" key="{3BFEFB74-185E-419E-AA29-10FEB802A19A}" path="SelectionRoutines.scs" />
+			<child name="RiskManager" key="{58DA41FC-4854-4556-96EC-1DC7F1DB469A}" path="RiskManager.scs" />
+			<child name="LaunchApplication" key="{D97D234D-8686-4757-B7F5-E7AECF7D3282}" path="LaunchApplication.scs" />
+			<child name="TradeCapture" key="{8F781E7D-C9B3-4872-8720-9925821A8FFF}" path="TradeCapture.scs" />
+		</folder>
+		<child name="Unit1" key="{9E84BC9D-5107-4CD3-B981-C590E7809CB7}" path="Unit1.scs" />
+		<child name="StepDefinitions" key="{8CF8CD43-0A93-4DA1-9677-259E10087621}" path="C:\Users\Public\Documents\TestComplete 14 Samples\BDD\WebStore_BDDSample\Script\StepDefinitions.js" />
+		<child name="TestRunner" key="{4B031F0F-0E97-438D-8FC1-66700D237AA6}" path="C:\Users\Public\Documents\TestComplete 14 Samples\BDD\WebStore_BDDSample\Script\TestRunner.js" />
+	</children>
+</Root>

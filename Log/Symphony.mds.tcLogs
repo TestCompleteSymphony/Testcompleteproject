@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="folders"/>
+		<Node name="logs">
+			<Node name="log idx=0000">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.4495884375"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{AA6A6BAB-B69C-4A97-BE84-BD912F097DE6}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_10_47 AM_24_441\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0001">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.4521482986"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{3DBE6B5B-02B3-4E36-BC85-C2653BFA71BA}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_10_51 AM_05_613\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0002">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.4532992361"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{FC25DF0A-1521-445B-958D-4B9E0BABE03A}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_10_52 AM_45_54\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0003">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.4574811343"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{ADC95FD0-16C7-42C9-B8A9-6A5E1469B1A8}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [LaunchApplication\LaunchTradeCapture]"/>
+				<Prp name="relpath" type="S" value="2_19_2019_10_58 AM_46_370\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0004">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5046457176"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{0FF2126A-79F0-4762-8EA0-967627342DB4}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [LaunchApplication\LaunchTradeCapture]"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_06 PM_41_390\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0005">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5060132292"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{DDA85607-C460-4749-98FF-A66B551167B1}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [LaunchApplication\LaunchTradeCapture]"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_08 PM_39_543\Description.tcLog"/>
+				<Prp name="status" type="I" value="1"/>
+			</Node>
+			<Node name="log idx=0006">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5078261574"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{72B26F27-3024-44BD-A63B-B1080BE03786}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_11 PM_16_180\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0007">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5084756366"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{B200A891-A1D3-4559-9898-A50896302447}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_12 PM_12_295\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0008">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.509789456"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{3A3AD5FD-ECA4-4003-86F5-A900E206DF49}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [TestRunner\RunByTag]"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_14 PM_05_809\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0009">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5102626273"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{837151BF-B110-43D5-B210-41CDE9742B23}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [TestRunner\RunByTag]"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_14 PM_46_691\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0010">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5112029051"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{AA599752-F5F3-43A4-81D8-29C99DC7E333}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [TestRunner\RunByTag]"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_16 PM_07_931\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0011">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5120166435"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{AB81A07A-6164-4E20-A018-418CD5FDCC11}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_17 PM_18_238\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0012">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5130462847"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{D7838277-9CCD-4C64-882F-0AC732368B2B}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_18 PM_47_199\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0013">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.5172359491"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{E5527571-D332-4062-AE3A-617242FE1969}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [LaunchApplication\LaunchTradeCapture]"/>
+				<Prp name="relpath" type="S" value="2_19_2019_12_24 PM_49_186\Description.tcLog"/>
+				<Prp name="status" type="I" value="1"/>
+			</Node>
+			<Node name="log idx=0014">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.6859651505"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{2FE259D2-8BFC-409C-9A76-75698D64F494}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_4_27 PM_47_389\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0015">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43515.7271136227"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{6EC0A63A-09EF-46F2-964C-1C533D38120F}"/>
+				<Prp name="nameofroot" type="S" value="Successfull creation of Phycal BUY/SELL Trades and Allocations by Running PASS"/>
+				<Prp name="relpath" type="S" value="2_19_2019_5_27 PM_02_617\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{681DCC69-A39F-4C4D-8E7D-B2D9362FAF4F}"/>
+		<Prp name="version" type="S" value="11.0"/>
+	</Node>
+</Nodes>

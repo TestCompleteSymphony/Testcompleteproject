@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 5">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="492"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="datetime" type="D" value="43514.2793492014"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="174"/>
+					<Prp name="object top" type="I" value="151"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;tradeLayoutGroup&quot;][&quot;tradeDataCtl&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;TradeType&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="366"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="75"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The text 'Counterparty' was entered in the text editor."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;tradeLayoutGroup&quot;][&quot;tradeDataCtl&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;TradeType&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;tradeDataCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;cmbTradeType&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5085165625"/>
+			<Prp name="line no" type="I" value="75"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="message 11">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="563"/>
+					<Prp name="image file name" type="S" value="visImage10.png"/>
+					<Prp name="datetime" type="D" value="43514.2794061806"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="296"/>
+					<Prp name="object top" type="I" value="273"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;spnlQuantity&quot;][&quot;lookupEdit&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="492"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="101"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="'BBL[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;spnlQuantity&quot;][&quot;lookupEdit&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;groupContainer&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoMainCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;gridPhyicalTradeInfo&quot;)[&quot;WPFObject&quot;](&quot;spnlQuantity&quot;)[&quot;WPFObject&quot;](&quot;dContrQtyUom&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;lookupEdit&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5085781944"/>
+			<Prp name="line no" type="I" value="101"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 2">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="236"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="datetime" type="D" value="43514.279306331"/>
+					<Prp name="click point x" type="I" value="215"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="132"/>
+					<Prp name="object top" type="I" value="109"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;TradeOrderTypesSelection&quot;][&quot;Grid&quot;][&quot;NewBtn&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="195"/>
+					<Prp name="click point y" type="I" value="120"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="38"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;TradeOrderTypesSelection&quot;][&quot;Grid&quot;][&quot;NewBtn&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;navigationToolBar&quot;)[&quot;WPFObject&quot;](&quot;NavBarGroup&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;rcntTradesAndExternalAppsCtl&quot;)[&quot;WPFObject&quot;](&quot;Border&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;stkPnlStartupOptions&quot;)[&quot;WPFObject&quot;](&quot;ordersTypesCtl&quot;)[&quot;WPFObject&quot;](&quot;GroupBox&quot;, &quot;Create New Trade&quot;, 1)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;btnCreate&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5084980324"/>
+			<Prp name="line no" type="I" value="38"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="message 9">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="491"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="datetime" type="D" value="43514.2794002083"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="296"/>
+					<Prp name="object top" type="I" value="273"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;spnlQuantity&quot;][&quot;TradeQuantity&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="378"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="95"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The text '1000.00' was entered in the text editor."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;spnlQuantity&quot;][&quot;TradeQuantity&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;groupContainer&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoMainCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;gridPhyicalTradeInfo&quot;)[&quot;WPFObject&quot;](&quot;spnlQuantity&quot;)[&quot;WPFObject&quot;](&quot;txtBoxtrdQuantity&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5085679167"/>
+			<Prp name="line no" type="I" value="95"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 10">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="491"/>
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="datetime" type="D" value="43514.2794026157"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="296"/>
+					<Prp name="object top" type="I" value="273"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;spnlQuantity&quot;][&quot;TradeQuantity&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="378"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="96"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="'[Tab]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;spnlQuantity&quot;][&quot;TradeQuantity&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;groupContainer&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoMainCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;gridPhyicalTradeInfo&quot;)[&quot;WPFObject&quot;](&quot;spnlQuantity&quot;)[&quot;WPFObject&quot;](&quot;txtBoxtrdQuantity&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5085712731"/>
+			<Prp name="line no" type="I" value="96"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="message 8">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="563"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="datetime" type="D" value="43514.2793765625"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="268"/>
+					<Prp name="object top" type="I" value="245"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;StackPanel&quot;][&quot;CommodityLookup&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="378"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="90"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="'BRENT[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;StackPanel&quot;][&quot;CommodityLookup&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;groupContainer&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoMainCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;gridPhyicalTradeInfo&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;dcommodity&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;lookupEdit&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5085641204"/>
+			<Prp name="line no" type="I" value="90"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Total number columns are 24"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5084989931"/>
+			<Prp name="line no" type="I" value="52"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="AddPhysicalTrade"/>
+			<Prp name="line no" type="I" value="15"/>
+		</Node>
+		<Node name="message 7">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="479"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="datetime" type="D" value="43514.2793722569"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="240"/>
+					<Prp name="object top" type="I" value="217"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;BuySellType&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="378"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="85"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The text 'Buy' was entered in the text editor."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;BuySellType&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;groupContainer&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoMainCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;gridPhyicalTradeInfo&quot;)[&quot;WPFObject&quot;](&quot;dcmbBuySellType&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.508540081"/>
+			<Prp name="line no" type="I" value="85"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value=""/>
+			<Prp name="line no" type="I" value="110"/>
+		</Node>
+		<Node name="message 6">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="734"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="datetime" type="D" value="43514.2793530093"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="117"/>
+					<Prp name="object top" type="I" value="94"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;tradeLayoutGroup&quot;][&quot;tradeDataCtl&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;counterParty&quot;][&quot;lookupEdit&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="578"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="80"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="'BANK-53[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;tradeLayoutGroup&quot;][&quot;tradeDataCtl&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;counterParty&quot;][&quot;lookupEdit&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;tradeDataCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;counterPartyStkPnl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;counterParty&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;lookupEdit&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5085319792"/>
+			<Prp name="line no" type="I" value="80"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{8F781E7D-C9B3-4872-8720-9925821A8FFF}"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="CreateTrade"/>
+			<Prp name="line no" type="I" value="110"/>
+		</Node>
+		<Node name="message 0">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="194"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="datetime" type="D" value="43514.2792963657"/>
+					<Prp name="click point x" type="I" value="185"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="132"/>
+					<Prp name="object top" type="I" value="109"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;TradeOrderTypesSelection&quot;][&quot;Grid&quot;][&quot;TradeOrderTypes&quot;][&quot;ToggleStateButton&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="177"/>
+					<Prp name="click point y" type="I" value="120"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="34"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="A click at point (8, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;TradeOrderTypesSelection&quot;][&quot;Grid&quot;][&quot;TradeOrderTypes&quot;][&quot;ToggleStateButton&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;navigationToolBar&quot;)[&quot;WPFObject&quot;](&quot;NavBarGroup&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;rcntTradesAndExternalAppsCtl&quot;)[&quot;WPFObject&quot;](&quot;Border&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;stkPnlStartupOptions&quot;)[&quot;WPFObject&quot;](&quot;ordersTypesCtl&quot;)[&quot;WPFObject&quot;](&quot;GroupBox&quot;, &quot;Create New Trade&quot;, 1)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;dcmbTradeOrderTypes&quot;)[&quot;WPFObject&quot;](&quot;ButtonContainer&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;PART_Item&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5084651389"/>
+			<Prp name="line no" type="I" value="34"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 4">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="492"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="datetime" type="D" value="43514.2793414352"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="146"/>
+					<Prp name="object top" type="I" value="123"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;tradeLayoutGroup&quot;][&quot;tradeDataCtl&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;TraderLookupEdit&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="366"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="70"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="'ALE[Tab][Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;tradeLayoutGroup&quot;][&quot;tradeDataCtl&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;StackPanel&quot;][&quot;TraderLookupEdit&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;tradeDataCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;ddTrader&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;lookupEdit&quot;))"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5085147106"/>
+			<Prp name="line no" type="I" value="70"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The test run has stopped because your test project is configured to stop on errors."/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="stack beginning" type="I" value="3"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The test run has stopped because --&lt;/p&gt;&lt;ul&gt;&lt;li&gt;An error message was posted to the log and&lt;/li&gt;&lt;li&gt;The &lt;a href=&quot;aqa-help://6090&quot;&gt;On error&lt;/a&gt; project property is set to &quot;Stop project&quot; or &quot;Stop test item&quot;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;If you don't want the test to stop on errors, set this property (&lt;b&gt;Project Editor &amp;rArr; Properties &amp;rArr; Playback&lt;/b&gt;), to &quot;Continue running&quot; or change your test commands so that they do not post errors to the log automatically. For example, if a window or process was not found, use WaitWindow, WaitProcess or similar methods to get the needed object.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;aqa-help://2207&quot;&gt;Read More&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5087071991"/>
+			<Prp name="line no" type="I" value="110"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="-1"/>
+		</Node>
+		<Node name="message 1">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="47"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="datetime" type="D" value="43514.2793042014"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="19"/>
+					<Prp name="object top" type="I" value="7"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_PopupRoot&quot;][&quot;PopupRoot&quot;][&quot;itmPurchageOrSaleTradeOrder&quot;]"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="5"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="35"/>
+					<Prp name="need update" type="B" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Physical"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5084723148"/>
+			<Prp name="line no" type="I" value="35"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Unable to find the object SetText(&quot;TBN/TBN&quot;). See Details for additional information."/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;br /&gt;&lt;br /&gt;Tested object:&lt;br /&gt;Aliases[&quot;TradeCapture&quot;][&quot;HwndSource_ribbonWindow&quot;][&quot;ribbonWindow&quot;][&quot;dwgMainPanel&quot;][&quot;mainPanel&quot;][&quot;PhyicalTradeInfoGrid&quot;][&quot;MotDropDown&quot;]&lt;br /&gt;(Sys[&quot;Process&quot;](&quot;TradeCapture&quot;)[&quot;WPFObject&quot;](&quot;HwndSource: ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;ribbonWindow&quot;)[&quot;WPFObject&quot;](&quot;DockPanelShell&quot;)[&quot;WPFObject&quot;](&quot;TradeCapture1Dharma_TejaQA__329__trade&quot;)[&quot;WPFObject&quot;](&quot;spMainPanel&quot;)[&quot;WPFObject&quot;](&quot;dwgMainPanel&quot;)[&quot;WPFObject&quot;](&quot;FormPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;formViewGrid&quot;)[&quot;WPFObject&quot;](&quot;userEntityForm&quot;)[&quot;WPFObject&quot;](&quot;mainGrid&quot;)[&quot;WPFObject&quot;](&quot;dpContent&quot;)[&quot;WPFObject&quot;](&quot;tradeFormView&quot;)[&quot;WPFObject&quot;](&quot;tradePanelCntrl&quot;)[&quot;WPFObject&quot;](&quot;mainPanel&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;DockPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeViewScroll&quot;)[&quot;WPFObject&quot;](&quot;tradeDetailsGrid&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeCtrl&quot;)[&quot;WPFObject&quot;](&quot;Grid&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;TILayoutControl&quot;)[&quot;WPFObject&quot;](&quot;groupContainer&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;tradeLayoutGroup&quot;)[&quot;WPFObject&quot;](&quot;physicalTradeInfoMainCtl&quot;)[&quot;WPFObject&quot;](&quot;StackPanel&quot;, &quot;&quot;, 1)[&quot;WPFObject&quot;](&quot;gridPhyicalTradeInfo&quot;)[&quot;WPFObject&quot;](&quot;stkMotDropDown&quot;))"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="date" type="D" value="43514.5087018982"/>
+			<Prp name="line no" type="I" value="110"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="-1"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+	</Node>
+</Nodes>
